@@ -42,10 +42,16 @@ const routes = [
   },
   //pojedinačna novost (objava)
   {
-    path: '/novosti/:id/:slug',
+    path: '/blog/:id/:slug',
     name: "post",
     component: () => import("@/views/posts/Post"),
     props: true
+  },
+  //sve novosti (objava)
+  {
+    path: '/blog',
+    name: "post",
+    component: () => import("@/views/posts/AllPosts"),
   },
   //pojedinačna ponuda
   {
