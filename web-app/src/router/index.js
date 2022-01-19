@@ -40,6 +40,12 @@ const routes = [
     name: "searchOffers",
     component: () => import("@/views/SearchOffers")
   },
+  // rezultati pretrage
+  {
+    path: '/pretraga',
+    component: () => import("@/views/SearchResults"),
+    props: route => ({ query: route.query.q })
+  },
   //pojedinačna novost (objava)
   {
     path: '/blog/:id/:slug',

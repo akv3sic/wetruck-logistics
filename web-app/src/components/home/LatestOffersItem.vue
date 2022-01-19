@@ -56,7 +56,7 @@ export default {
     props: {
         offer: {type: Object, required: true}
     },
-        computed: {
+    computed: {
         offerLink() {
             return {
                 name: "offer",
