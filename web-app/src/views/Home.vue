@@ -2,6 +2,7 @@
     <div>
       <Header/>
       <Hero/>
+      <Counters />
       <LatestOffers />
       <FeaturesPresentation />
       <Testimonials />
@@ -13,6 +14,7 @@
 <script>
 import Header from "@/components/layout/TheHeader"
 import Hero from "@/components/home/TheHero"
+import Counters from "@/components/home/Counters"
 import FeaturesPresentation  from "@/components/home/FeaturesPresentation"
 import LatestNews from '../components/home/LatestNews.vue'
 import LatestOffers from '../components/home/LatestOffers.vue'
@@ -23,7 +25,7 @@ import Footer from "@/components/layout/TheFooter"
     name: 'Home',
 
     components: {
-      Header, Hero, FeaturesPresentation, LatestNews, LatestOffers, Testimonials, Footer
+      Header, Hero, Counters, FeaturesPresentation, LatestNews, LatestOffers, Testimonials, Footer
     },
   }
 </script>
