@@ -44,7 +44,12 @@ const routes = [
   {
     path: '/pretraga',
     component: () => import("@/views/SearchResults"),
-    props: route => ({ query: route.query.q })
+    props: route => ({ query: route.query.iz,
+                       query: route.query.za,
+                       query: route.query.d, // duljina
+                       query: route.query.s, // sirina
+                       query: route.query.v, // visina
+                       query: route.query.masa  })
   },
   //pojedinačna novost (objava)
   {
@@ -56,7 +61,7 @@ const routes = [
   //sve novosti (objava)
   {
     path: '/blog',
-    name: "post",
+    name: "blog",
     component: () => import("@/views/posts/AllPosts"),
   },
   //pojedinačna ponuda
