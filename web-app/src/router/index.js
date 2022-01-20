@@ -15,30 +15,55 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: 'weTruck - Your logistic solution',
+      title: 'weTruck - Your Logistics Solution',
       metaTags: [
         {
           name: 'description',
-          content: 'Your logistic solution.'
+          content: 'Your logistics solution.'
         },
         {
           property: 'og:description',
-          content: 'Your logistic solution.'
+          content: 'Your logistics solution.'
         }
       ]
     }
   },
-    // FAQs
-    {
-      path: '/cesto-postavljana-pitanja',
-      name: "FAQs",
-      component: () => import("@/views/FAQs")
-    },
+  // FAQs
+  {
+    path: '/cesto-postavljana-pitanja',
+    name: "FAQs",
+    component: () => import("@/views/FAQs")
+  },
+  // pretraga ponuda
+  {
+    path: '/pretraga-ponuda',
+    name: "searchOffers",
+    component: () => import("@/views/SearchOffers")
+  },
+  // rezultati pretrage
+  {
+    path: '/pretraga',
+    component: () => import("@/views/SearchResults"),
+    props: route => ({ query: route.query.q })
+  },
   //pojedinačna novost (objava)
   {
-    path: '/novosti/:id/:slug',
+    path: '/blog/:id/:slug',
     name: "post",
     component: () => import("@/views/posts/Post"),
+    props: true
+  },
+  //sve novosti (objava)
+  {
+    path: '/blog',
+    name: "post",
+    component: () => import("@/views/posts/AllPosts"),
+  },
+  //pojedinačna ponuda
+  {
+    path: '/ponude/:id/:slug',
+    name: "offer",
+    component: () => import("@/views/offers/Offer"),
     props: true
   },
   // auth

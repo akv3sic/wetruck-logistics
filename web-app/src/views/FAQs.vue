@@ -2,7 +2,7 @@
     <div>
         <Header />
         <v-container class="pa-16">
-            <HeadingWithImage />
+            <HeadingWithImage title="Često postavljana pitanja" height="33vh"/>
             <v-row>
                 <!-- PITANJA I ODGOVORI -->
                 <v-col cols="7" class="mt-8">
