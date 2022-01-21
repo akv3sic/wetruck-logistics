@@ -33,6 +33,7 @@
                 :key="index"
                 :to="item.to"
                 class="mx-2"
+                exact
                 >
                 <v-icon v-if=item.desktopIcon class="pb-1 pr-1"> {{ item.icon }} </v-icon>
                 <v-list-item-title class="text-body font-weight-medium title-color"> {{ item.title }}</v-list-item-title>
