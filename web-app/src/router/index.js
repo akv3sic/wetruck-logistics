@@ -87,7 +87,64 @@ const routes = [
     name: 'reset-password',
     component: () => import("@/views/auth/ResetPassword")
   },
-  // 404 redirect
+
+/****************************************************/
+/************ OGLAŠIVAČI NADZORNA PLOČA *************/
+/****************************************************/
+
+// moj-racun
+{
+  path: '/oglasivaci',
+  redirect: '/oglasivaci/moj-racun',
+  name: 'advertisers-home',
+  component: () => import("@/views/advertisers/DashboardHome"),
+  // meta: { requiresAuth: true },
+  meta: {
+    title: 'Moj weTruck',
+    metaTags: [
+      {
+        name: 'description',
+        content: 'Moj weTruck'
+      },
+      {
+        property: 'og:description',
+        content: 'Moj weTruck'
+      }
+    ]
+  },
+  children: [
+
+    {
+      path: 'moj-racun',
+      name: 'advertisers-my-account',
+      component: () => import("@/views/advertisers/MyAccount"),
+
+    },
+    {
+      path: 'voznje',
+      name: 'advertisers-transports',
+      component: () => import("@/views/advertisers/MyTransports"),
+
+
+    },
+    {
+      path: 'vozaci',
+      name: 'advertisers-drivers',
+      component: () => import("@/views/advertisers/MyDrivers"),
+    },
+    {
+      path: 'weTruck-kredit',
+      name: 'advertisers-weTruck-credit',
+      component: () => import("@/views/advertisers/WeTruckCredit"),
+    }
+  ]
+},
+
+
+/****************************************************/
+
+
+  //404 redirect
   {
     path: '/:catchAll(.*)',
     name: 'NotFound',
