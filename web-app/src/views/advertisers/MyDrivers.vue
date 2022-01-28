@@ -6,7 +6,7 @@
                 <span>Ukupno: 3</span>
             </v-col>
             <v-col>
-                <v-btn class="primary">Dodaj novog</v-btn>
+                <v-btn class="primary" to="vozaci/dodaj-novog">Dodaj novog</v-btn>
             </v-col>
         </v-row>
         
