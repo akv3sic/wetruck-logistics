@@ -6,7 +6,7 @@
                 <span class="secondary--text">Dodajte novi oglas ili pregledajte prethodne vožnje.</span>
             </v-col>
             <v-col>
-                <v-btn class="primary">Dodaj novu</v-btn>
+                <v-btn class="primary" to="voznje/dodaj-novu">Dodaj novu</v-btn>
             </v-col>
         </v-row>
 

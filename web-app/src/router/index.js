@@ -124,13 +124,21 @@ const routes = [
       path: 'voznje',
       name: 'advertisers-transports',
       component: () => import("@/views/advertisers/MyTransports"),
-
-
+    },
+    {
+      path: 'voznje/dodaj-novu',
+      name: 'advertisers-transports-add-new',
+      component: () => import("@/views/advertisers/MyTransportsAddNew"),
     },
     {
       path: 'vozaci',
       name: 'advertisers-drivers',
       component: () => import("@/views/advertisers/MyDrivers"),
+    },
+    {
+      path: 'vozaci/dodaj-novog',
+      name: 'advertisers-add-new-driver',
+      component: () => import("@/views/advertisers/MyDriversAddNew"),
     },
     {
       path: 'weTruck-kredit',
